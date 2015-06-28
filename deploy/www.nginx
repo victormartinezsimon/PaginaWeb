@@ -1,0 +1,29 @@
+server {
+  listen 80;
+  server_name www.victormartinezsimon.com victormartinezsimon.com;
+  root /opt/www/current;
+  index index.html;
+  error_page 404 404.html;
+  add_header "Cache-Control" "Public";
+  proxy_http_version 1.1;
+  proxy_buffers 100 250K;
+  client_max_body_size 1m;
+  access_log /var/log/opt/web.stats.log stats buffer=16K;
+
+  location = /favicon.ico {
+    expires max;
+  }
+
+  location / {
+    expires 5m;
+    try_files $uri $uri/ /404.html;
+  }
+
+  location = /crossdomain.xml {
+    expires 1w;
+  }
+
+  location ~*\.php {
+    add_header "Not Found" 404;
+  }
+}
