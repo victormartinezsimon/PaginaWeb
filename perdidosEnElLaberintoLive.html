@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Pagina web de Victor Martinez Simon</title>
+		<link href="media/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    	<link rel="stylesheet" href="media/font-awesome/css/font-awesome.min.css">
+		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "perdidosEnElLaberintoLive.unity3d");
+			});
+		-->
+		</script>
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="./index.html">Sobre Mi</a></li>
+					<li><a href="./curriculum_es.html">Curriculum Vitae</a></li>
+					<li class="dropdown" class="active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Proyectos<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="GameJam2015_es.html">GameJam 2015</a></li>
+							<li><a href="PerdidosEnElLaberinto_es.html">Perdidos en el laberinto</a></li>
+							<li><a href="RandomRaces_es.html">Random Races</a></li>
+							<li><a href="GalleryPuzzle9_es.html">Gallery Puzzle 9</a></li>
+							<li><a href="GameJam2014_es.html">GameJam 2014</a></li>
+							<li><a href="PitStop_es.html">PitStop</a></li>
+							<li><a href="ProyectoFinalCarrera_es.html">Proyecto Final de Carrera</a></li>				
+							<li><a href="IronHand_es.html">Iron Hand</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="./contact_es.html"> Contacto</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Idiomas<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Español</a></li>
+							<li><a href="#">English</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="text-center"> 
+		<h1>Perdidos en el laberinto</h1>
+	</div>	
+
+		<div class="col-md-10 col-md-offset-1">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="media/js/jquery-1.10.2.min.js"></script>
+    	<script src="media/bootstrap/js/bootstrap.min.js"></script>
+		
+	</body>
+</html>
