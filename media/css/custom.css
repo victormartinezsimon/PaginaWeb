@@ -55,3 +55,23 @@ h2 {
 li {
   list-style-type: none;
 }
+
+#ToTop {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  font-size: 2em;
+  background-color: #3dc2f1;
+  border-radius: 20%;
+  padding: 0.4em; 
+}
+
+#ToTop a {
+  color: #fff;
+}
+#ToTop a:link {
+    text-decoration: none;
+}
+#ToTop:hover {
+  background-color: #3dc2d0;
+}
