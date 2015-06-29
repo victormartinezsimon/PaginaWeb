@@ -1,5 +1,6 @@
 var config = {
-  reset:  true
+  reset:  true,
+   vFactor: 0.2
 }
 
 window.sr = new scrollReveal(config);
