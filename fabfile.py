@@ -15,6 +15,7 @@ def deploy():
       sudo("cp -r repository current")
 
 def setup():
+  sudo("apt-get update")
   sudo("apt-get -y install nginx git")
   sudo("mkdir -p /opt/www/current")
   sudo("chown -R ubuntu:ubuntu /opt/www")
@@ -24,8 +25,8 @@ def setup():
   run("chmod 600 ~/.ssh/gitKey")
 
   with cd('/opt/www/'):
-    run("git clone git@git:monkimun/web.git")
-    run("mv web repository")
+    run("git clone https://github.com/victormartinezsimon/PaginaWeb.git")
+    run("mv PaginaWeb repository")
 
   put("deploy/www.nginx", "/etc/nginx/sites-available/www.conf", True)
   sudo("ln -s /etc/nginx/sites-available/www.conf /etc/nginx/sites-enabled/www.conf")
