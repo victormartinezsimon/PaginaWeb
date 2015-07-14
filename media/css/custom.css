@@ -58,7 +58,7 @@ li {
 
 #ToTop {
   position: fixed;
-  bottom: 2%;
+  bottom: 2.5em;
   right: 1%;
   font-size: 2em;
   background-color: #3dc2f1;
