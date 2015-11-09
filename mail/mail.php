@@ -1,7 +1,7 @@
 <?php
 // configurate notification subject and email address here
 // to change notification message please see 'fetchNotificationBody' function
-define('NOTIFICATION_SUBJECT', 'Savvy: Contact form notification');
+define('NOTIFICATION_SUBJECT', 'Contact from email');
 define('NOTIFICATION_EMAIL_ADDRESS', 'victormartinezsimon@gmail.com'); // for example: 'your.email@host.com'
 
 $response = array(
