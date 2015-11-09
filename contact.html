@@ -21,7 +21,7 @@
                 <header>
                     <div id="headerMenuSlidingElement" class="main-nav__sliding-element"></div>
                     <ul class="main-nav">
-                        <li class="main-nav__item main-nav__item--active">
+                        <li class="main-nav__item">
                             <a class="main-nav__item-link" href="index.html">
                                 <span class="main-nav__item-icon-wrapper">
                                     <i class="main-nav__item-icon icon-home"></i>
@@ -53,7 +53,7 @@
                                 <span class="main-nav__item-content">Blog</span>
                             </a>
                         </li> -->
-                        <li class="main-nav__item">
+                        <li class="main-nav__item main-nav__item--active">
                             <a class="main-nav__item-link" href="contact.html">
                                 <span class="main-nav__item-icon-wrapper">
                                     <i class="main-nav__item-icon icon-envelop"></i>
@@ -83,6 +83,7 @@
                             <li>Game Developer</li>
                             <li>IA developer</li>
                             <li>Software Engineer</li>
+                            <li> <a class = "normal" href = "donwloads/resume.pdf"> Download Resume </a> </li>
                         </ul>
                     </div>
                     <!-- .social-icons -->
@@ -92,7 +93,6 @@
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </li>
-                       
                         <li>
                             <a href="https://es.linkedin.com/in/victormartinezsimon" target="_blank" class="social-icon--linkedin">
                                 <i class="fa fa-linkedin"></i>
@@ -115,23 +115,53 @@
             <div class="layout-container-main layout-container-width">
                 <!-- .layout-content -->
                 <div class="layout-content">
-                    <section class="page-home layout-row">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h1 class="page-home__page-title">Victor Martinez Simon Personal WebPage</h1>
-                                <div class="page-home__text">
-                                    <p>I'm a Game developer based on Madrid, Spain. I've been in business since 2014 working for some companies and doing own work.</p>
-                                    <p>I'm specialized in Gameplay and IA, doing this work in the companies I used to work in it.</p>
+                    <section class="page-contact">
+                        <div class="layout-title-wrapper layout-row">
+                            <h1 class="layout-title layout-container-width layout-container">contact.
+                                <span class="layout-title__subtitle">Wanna talk to me?</span>
+                            </h1>
+                        </div>
+                        <div class="layout-row">
+                            <div id="savvyMapCanvas" class="google-map--contact"></div>
+                        </div>
+                        <!-- #contactForm -->
+                        <form action="http://oleg.dev/savvy/www/mail/mail.php" id="contactForm" method="post" class="layout-horizontal-padding">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input name="name" class="form__item" type="text" placeholder="name">
+                                    <div class="form__item__failed-wrap"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <input name="email" class="form__item" type="text" placeholder="email">
+                                    <div class="form__item__failed-wrap"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6 page-home__thumbnail-wrap">
-                                <img class="page-home__thumbnail" src="uploads/home/Foto.jpg" alt="Profile Photo">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea name="msg" class="form__textarea form__item" placeholder="message"></textarea>
+                                    <div class="form__item__failed-wrap"></div>
+                                    <div class="form__status"></div>
+                                    <button type="submit" class="btn btn-lg btn--style1">Send message</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img class="page-home__sign" src="uploads/home/sign.png" alt="">
-                            </div>
+                        </form>
+                        <!-- end #contactForm -->
+                        <div class="layout-horizontal-padding--clean"></div>
+                        <div class="layout-horizontal-padding">
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="fa fa-envelope"></i>
+                                    <span>victormartinezsimon@gmail.com</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <span>(+34)628006956</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    <span>Madrid, Spain</span>
+                                </li>
+                            </ul>
                         </div>
                     </section>
                 </div>
