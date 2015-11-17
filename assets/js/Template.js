@@ -1192,4 +1192,5 @@ Template.tools = {
 
 $(document).on('ready', function(){
 	Template.init();
+	$(".fancybox").fancybox();
 });
