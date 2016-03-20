@@ -26,7 +26,7 @@ var transporter = nodemailer.createTransport(smtpConfig);
 
 
 // This responds with "Hello World" on the homepage
-app.post('/sendEmail', function (req, res) {
+app.post('/sendEmail', function (req, response) {
 
     var mailOptions = {
     from: req.body.name + '|' + '<' + req.body.email + '>', // sender address
@@ -43,6 +43,13 @@ app.post('/sendEmail', function (req, res) {
       }
       console.log('Message sent: ' + info.response);
   });
+
+  response.writeHead(200, {"Content-Type": "application/json"});
+  var json = JSON.stringify({ 
+    result: "ok"
+  });
+  response.end(json);
+
 })
 
 var server = app.listen(8081, function () {
