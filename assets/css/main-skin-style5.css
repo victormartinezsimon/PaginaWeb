@@ -74,6 +74,8 @@ a:focus {
   left: 0;
   bottom: 35px;
   width: 100%;
+  display: none;
+
 }
 .footer__copyright {
   margin: 0;
