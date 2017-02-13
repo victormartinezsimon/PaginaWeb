@@ -12,7 +12,7 @@ var Template = {
 	},
 
 	// set to true to disable ajax pages loading
-	disableAjaxNavigation:false,
+	disableAjaxNavigation:true,
 
 	/**
 	 * Main init function
